@@ -1,4 +1,4 @@
-{ pkgs, fetchurl, ant, oraclejdk, gcc, libX11, libXt, libXcursor, libXxf86vm, libXrandr, libXext }:
+{ stdenv, pkgs, fetchurl, ant, oraclejdk, gcc, libX11, libXt, libXcursor, libXxf86vm, libXrandr, libXext }:
 
 stdenv.mkDerivation rec {
   name = "lwjgl-${version}";
