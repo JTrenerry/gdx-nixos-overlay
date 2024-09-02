@@ -1,6 +1,6 @@
 { stdenv, pkgs, fetchurl, ant, openjdk, gcc }:
 
-stdenv.mkDerivation rec {
+pkgs.stdenv.mkDerivation rec {
   name = "libgdx-${version}";
   version = "1.9.6";
 
