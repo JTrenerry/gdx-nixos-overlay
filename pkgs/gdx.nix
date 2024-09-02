@@ -1,4 +1,4 @@
-{ pkgs, fetchurl, ant, openjdk, gcc }:
+{ stdenv, pkgs, fetchurl, ant, openjdk, gcc }:
 
 stdenv.mkDerivation rec {
   name = "libgdx-${version}";
