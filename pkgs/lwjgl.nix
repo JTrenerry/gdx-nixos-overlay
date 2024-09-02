@@ -1,6 +1,6 @@
 { stdenv, pkgs, fetchurl, ant, oraclejdk, gcc, libX11, libXt, libXcursor, libXxf86vm, libXrandr, libXext }:
 
-stdenv.mkDerivation rec {
+pkgs.stdenv.mkDerivation rec {
   name = "lwjgl-${version}";
   version = "2.9.2";
 
