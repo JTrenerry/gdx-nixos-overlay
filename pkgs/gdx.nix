@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, ant, openjdk, gcc }:
+{ pkgs, fetchurl, ant, openjdk, gcc }:
 
 stdenv.mkDerivation rec {
   name = "libgdx-${version}";
@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
     cp extensions/gdx-box2d/gdx-box2d/libs/linux64/*.so $out/lib
   '';
 
-  meta = with stdenv.lib; {
+  meta = with pkgs.lib; {
     description = "Desktop/Android/BlackBerry/iOS/HTML5 Java game development framework";
     longDescription = '''';
     homepage = http://libgdx.badlogicgames.com/;
