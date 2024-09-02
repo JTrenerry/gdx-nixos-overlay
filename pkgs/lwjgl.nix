@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, ant, oraclejdk, gcc, libX11, libXt, libXcursor, libXxf86vm, libXrandr, libXext }:
+{ pkgs, fetchurl, ant, oraclejdk, gcc, libX11, libXt, libXcursor, libXxf86vm, libXrandr, libXext }:
 
 stdenv.mkDerivation rec {
   name = "lwjgl-${version}";
@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
     cp bin/lwjgl/*.so $out/lib
   '';
 
-  meta = with stdenv.lib; {
+  meta = with pkgs.lib; {
     description = "The Lightweight Java Game Library";
     longDescription = ''
       LWJGL is a Java library that enables cross-platform access to popular native APIs useful in the development of graphics (OpenGL), audio (OpenAL) and parallel computing (OpenCL) applications. This access is direct and high-performance, yet also wrapped in a type-safe and user-friendly layer, appropriate for the Java ecosystem.
